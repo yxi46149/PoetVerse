@@ -2,6 +2,29 @@
 
 诗境 PoetVerse 是一个以古典诗词为主题的网站。前端使用 Vue 3、Vite、TypeScript、Vue Router、Element Plus 和 Tailwind CSS，后端位于 `server/`，使用 NestJS 11、Prisma 7 和 MySQL 8。
 
+## 项目截图
+
+首页，浅色 / 深色两套主题：
+
+<img src="images/img.png" alt="首页 · 浅色主题" width="49%"> <img src="images/img_1.png" alt="首页 · 深色主题" width="49%">
+
+朝代寻踪与诗词选读，可按心境、朝代、诗体逐层收窄：
+
+![朝代寻踪与诗词选读](images/img_2.png)
+
+诗词列表，左侧朝代与诗体筛选，右侧两列诗签：
+
+![诗词列表](images/img_3.png)
+
+诗词详情，竖排正文、主题标签与作者小传：
+
+![诗词详情](images/img_4.png)
+
+工作区（`/app`），收录规模与最近导入一览：
+
+![工作区](images/img_5.png)
+
+
 ## 本地开发
 
 安装前后端依赖并生成数据库客户端：
