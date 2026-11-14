@@ -129,14 +129,13 @@ def main() -> int:
                 )
             out.write('\n')
 
-        # 诗词
+        # 诗词：author_id 一律写 NULL，导入后用 UPDATE 按 (name, dynasty) 回填。
+        # 原因：作者表的 id 在 MySQL 侧可能因 (name, dynasty) 唯一键的存在而被 ON DUPLICATE
+        # 保留旧值，Python 侧预算的 uuid 就会悬空，撞外键约束。回填走数据库自己的比较规则，最稳。
         poem_rows = []
         for p in poems:
-            key = (p['author_name'], p['dynasty'])
-            if key in author_ids:
-                matched += 1
             poem_rows.append((
-                uuid5('poem', p['dedup_hash']), p['title'], author_ids.get(key),
+                uuid5('poem', p['dedup_hash']), p['title'], None,
                 p['author_name'], p['dynasty'], p['form'], p['content'],
                 p['normalized_content'], p['dedup_hash'], p.get('source') or REPO,
                 p.get('source_url'), p.get('license') or 'PD', p.get('edition') or '',
@@ -150,6 +149,15 @@ def main() -> int:
                 + values_sql(part) + '\nON DUPLICATE KEY UPDATE id = id;\n'
             )
         out.write('\n')
+
+        out.write(
+            '-- 按 (name, dynasty) 用数据库自身的比较规则回填 author_id，'
+            '避免 Python 侧预算的 uuid 与库里已有作者 id 不一致\n'
+            'UPDATE poems p JOIN authors a\n'
+            '   ON a.name = p.author_name AND a.dynasty = p.dynasty\n'
+            '   SET p.author_id = a.id\n'
+            ' WHERE p.author_id IS NULL;\n\n'
+        )
 
         # 诗词-标签关联
         links = []
@@ -176,7 +184,8 @@ def main() -> int:
         )
 
     size = os.path.getsize(out_path)
-    print(f'完成：{out_path}（{size / 1024 / 1024:.1f} MB），作者匹配 {matched}/{len(poems)} 首', flush=True)
+    matched = sum(1 for p in poems if (p['author_name'], p['dynasty']) in author_ids)
+    print(f'完成：{out_path}（{size / 1024 / 1024:.1f} MB），可回填作者 {matched}/{len(poems)} 首', flush=True)
     return 0
 
 
