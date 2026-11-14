@@ -10,7 +10,7 @@
 
 set -euo pipefail
 
-SEED="${1:-/opt/PoetVerse/poetverse-seed.sql.gz}"
+SEED="${1:-$(cd "$(dirname "$0")/.." && pwd)/poetverse-seed.sql.gz}"
 PASSFILE="${2:-/root/poetverse.dbpass}"
 EXPECTED_SHA="f39bc35f8b0e137b7712c64f29229a926e86d160f98bceedc9f1acf5cd52f21b"
 CONTAINER="mysql"
