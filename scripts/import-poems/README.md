@@ -27,6 +27,26 @@ python clean.py --to-mysql "mysql://root:123456@192.168.100.8:3306/poetverse"
 python clean.py --no-download
 ```
 
+## 离线导入：不进容器也能导库
+
+服务器上既没有 `data/raw/` 也没装 pymysql 时，在本机把清洗结果转成 SQL，传上去直接喂给 mysql 客户端：
+
+```bash
+# 本机：生成 SQL（--out 以 .gz 结尾会自动压缩）
+python json2sql.py --out poetverse-seed.sql.gz
+
+# 上传
+scp poetverse-seed.sql.gz root@服务器:/opt/PoetVerse/
+
+# 服务器：导入（示例用应用账号，密码从文件读，避免出现在命令行历史里）
+gunzip -c /opt/PoetVerse/poetverse-seed.sql.gz \
+  | docker exec -i mysql mysql -upoetverse -p"$(cat /root/poetverse.dbpass)" poetverse
+```
+
+生成的 SQL 可重复执行：作者按 `(name, dynasty)`、标签按 `name`、诗词按 `dedup_hash` 去重，
+主键由这些天然键经 UUIDv5 推导，所以每次生成结果稳定，重复导入不会产生重复行。
+先拿 `--limit 5000` 或 `data/clean/sample.poems.json` 走一遍可验证链路。
+
 ## 清洗规则
 
 | 项目 | 规则 |

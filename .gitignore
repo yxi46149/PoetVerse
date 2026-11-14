@@ -22,3 +22,7 @@ data/clean/
 
 # 部署打包产物
 poetverse-src.tar.gz
+
+# 数据导入产物
+poetverse-seed.sql*
+poetverse-sample.sql*
