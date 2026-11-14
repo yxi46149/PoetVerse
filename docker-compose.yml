@@ -2,7 +2,7 @@
 # 容器 80 只发布到宿主机回环地址，由宿主机上已有的 Nginx 反代过来（示例见 deploy/host-nginx.sample.conf），
 # 不直接对外暴露，也不抢占宿主机 80 端口。
 #
-#   docker compose --env-file server/.env up -d --build
+#   docker compose up -d --build
 #   curl http://127.0.0.1:8080/api/health
 #
 # 数据库是另一个 compose 里的 mysql 容器。它只把 3306 发布到宿主机回环（127.0.0.1:3306:3306），
@@ -25,10 +25,10 @@ services:
       # 只绑宿主机回环，外部流量一律经宿主机 Nginx
       - "127.0.0.1:${APP_PORT:-8080}:80"
 
-    environment:
-      DATABASE_URL: ${DATABASE_URL:?请在 .env 或环境变量中提供 DATABASE_URL}
-      # 同域部署（Nginx 反代）不需要 CORS，跨域时才填前端域名
-      CORS_ORIGIN: ${CORS_ORIGIN:-}
+    # 变量从 server/.env 读，在容器创建时注入。用 env_file 而不是 environment 插值，
+    # 好处是 ps / logs / exec 这类命令不需要再带 --env-file；只有 up 前需要文件存在。
+    env_file:
+      - ./server/.env
 
     healthcheck:
       test: ["CMD", "curl", "-fsS", "http://127.0.0.1/healthz"]

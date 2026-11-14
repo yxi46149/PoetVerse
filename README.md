@@ -68,8 +68,8 @@ docker network create shared-db
 #          name: shared-db
 #          external: true
 
-# 2. 复用 server/.env 里的 DATABASE_URL 构建并启动
-docker compose --env-file server/.env up -d --build
+# 2. 用 server/.env 里的 DATABASE_URL 构建并启动（compose 自动读取，无需 --env-file）
+docker compose up -d --build
 
 # 3. 验证
 curl http://127.0.0.1:8080/api/health
@@ -89,7 +89,7 @@ docker run -d --name poetverse -p 127.0.0.1:8080:80 --network shared-db \
 - 容器内 API 监听 `0.0.0.0:8091`，只对容器内的 Nginx 可见；对外只有容器的 80，且只绑宿主机回环。改映射端口用 `APP_PORT=8080`。
 - **数据库以容器运行时，不要写宿主机地址**：MySQL 若只发布到 `127.0.0.1:3306`，那个端口其它容器连不到，`host.docker.internal` 也到不了（docker0 网关不是回环）。正确做法是共享 docker 网络、用容器名当主机名：`DATABASE_URL=mysql://user:pass@mysql:3306/poetverse`。
 - 宿主机 80 已被占用时保持默认 bridge 网络 + `ports` 映射即可，**不要**改 host 网络模式（它会独占宿主机端口）。
-- `.env` 不会被打进镜像（见 [.dockerignore](.dockerignore)），配置一律通过 `-e` 或 compose `environment` 注入。
+- `.env` 不会被打进镜像（见 [.dockerignore](.dockerignore)）：镜像里只有依赖和构建产物，运行时配置由 compose 的 `env_file: server/.env` 注入（手动 `docker run` 时用 `-e`）。
 - 前后端同域时 `VITE_API_BASE_URL` 留空即可；分域名部署时用 `--build-arg VITE_API_BASE_URL=https://api.example.com/api` 重新构建。
 - 日志走 stdout：`docker logs -f poetverse`。想把 MySQL 也放进容器，取消 [docker-compose.yml](docker-compose.yml) 底部 `db` 服务的注释。
 
