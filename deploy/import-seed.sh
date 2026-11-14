@@ -40,6 +40,8 @@ run_sql() {
 }
 
 echo "==> 2/4 导入数据（约 3-5 分钟；中断也没关系，重跑会接着导）"
+# 老批次记录留着会和文件里的固定批次 ID 撞主键，先清掉（只是导入元数据，不影响诗词）
+run_sql -e "DELETE FROM import_batches WHERE operator = 'json2sql';" || true
 {
   echo "SET FOREIGN_KEY_CHECKS=0;"
   gunzip -c "$SEED"

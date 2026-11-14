@@ -180,7 +180,7 @@ def main() -> int:
                 str(uuid.uuid4()), REPO, os.path.basename(out_path),
                 len(poems), len(poems), datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
                 datetime.now().strftime('%Y-%m-%d %H:%M:%S'), 'json2sql',
-            )]) + ';\n'
+            )]) + '\nON DUPLICATE KEY UPDATE succeeded = VALUES(succeeded);\n'
         )
 
     size = os.path.getsize(out_path)
