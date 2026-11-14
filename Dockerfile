@@ -6,8 +6,15 @@
 #   docker build -t poetverse:latest .
 #   docker run -d -p 8080:80 -e DATABASE_URL="mysql://user:pass@host:3306/poetverse" poetverse:latest
 
+# 基础镜像自带的 npm 是 10.x，而开发机用 npm 11.x 生成 lock 文件；两者对同一份 lock 的
+# 校验规则不同（npm 10 会报 "Missing: @emnapi/core ... from lock file"）。这里把 npm
+# 升级到与开发机一致的版本，保证 `npm ci` 的校验结果和本地相同。升级开发机 npm 时同步改这里。
+ARG NPM_VERSION=11.6.1
+
 # ---------------------------------------------------------------- 构建阶段
 FROM node:22-bookworm-slim AS build
+ARG NPM_VERSION
+RUN npm install -g npm@${NPM_VERSION} && npm --version
 WORKDIR /app
 
 # 先只拷 lock 文件，依赖不变时这一层可以命中缓存
@@ -26,6 +33,9 @@ RUN VITE_API_BASE_URL="$VITE_API_BASE_URL" npm run build \
 
 # ---------------------------------------------------------------- 运行阶段
 FROM node:22-bookworm-slim AS runtime
+# 与构建阶段保持同一个 npm 版本，生产依赖的安装走同样的 lock 校验规则
+ARG NPM_VERSION
+RUN npm install -g npm@${NPM_VERSION}
 
 ENV NODE_ENV=production \
     HOST=0.0.0.0 \
