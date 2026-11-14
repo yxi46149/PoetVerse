@@ -1,0 +1,77 @@
+# 单容器部署：Nginx(80) + NestJS(8091) 打在同一个镜像里。
+# 容器 80 只发布到宿主机回环地址，由宿主机上已有的 Nginx 反代过来（示例见 deploy/host-nginx.sample.conf），
+# 不直接对外暴露，也不抢占宿主机 80 端口。
+#
+#   docker compose --env-file server/.env up -d --build
+#   curl http://127.0.0.1:8080/api/health
+#
+# 数据库是另一个 compose 里的 mysql 容器。它只把 3306 发布到宿主机回环（127.0.0.1:3306:3306），
+# 那个端口其它容器连不到，host.docker.internal 也到不了（docker0 网关不是回环）。
+# 所以这里通过共享 docker 网络、用容器名访问：DATABASE_URL=mysql://user:pass@mysql:3306/poetverse
+
+services:
+  poetverse:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        # 前后端同域时留空，前端会请求相对路径 /api
+        VITE_API_BASE_URL: ${VITE_API_BASE_URL:-}
+    image: poetverse:latest
+    container_name: poetverse
+    restart: unless-stopped
+
+    ports:
+      # 只绑宿主机回环，外部流量一律经宿主机 Nginx
+      - "127.0.0.1:${APP_PORT:-8080}:80"
+
+    environment:
+      DATABASE_URL: ${DATABASE_URL:?请在 .env 或环境变量中提供 DATABASE_URL}
+      # 同域部署（Nginx 反代）不需要 CORS，跨域时才填前端域名
+      CORS_ORIGIN: ${CORS_ORIGIN:-}
+
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://127.0.0.1/healthz"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
+
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+# 与数据库容器共享的网络。该 MySQL 由多个应用共用，网络不归任何 compose 项目：
+# 先 docker network create shared-db 一次，双方都以 external 接入，谁 down 都不会删掉它。
+# 参考 deploy/mysql-compose.sample.yml。
+networks:
+  default:
+    name: shared-db
+    external: true
+
+# 需要顺带把 MySQL 也跑在这份 compose 里时，取消注释，删掉上面的 networks 段，
+# 并把 DATABASE_URL 改成 mysql://user:pass@db:3306/poetverse
+#
+#  db:
+#    image: mysql:8.4
+#    container_name: poetverse-mysql
+#    restart: unless-stopped
+#    environment:
+#      MYSQL_DATABASE: poetverse
+#      MYSQL_USER: poetverse
+#      MYSQL_PASSWORD: ${MYSQL_PASSWORD:?}
+#      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:?}
+#    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+#    volumes:
+#      - mysql-data:/var/lib/mysql
+#      - ./db/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+#    healthcheck:
+#      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-p$$MYSQL_PASSWORD"]
+#      interval: 10s
+#      timeout: 5s
+#      retries: 10
+#
+# volumes:
+#   mysql-data:

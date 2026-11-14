@@ -1,0 +1,462 @@
+[
+ {
+  "title": "帝京篇十首 一",
+  "author_name": "太宗皇帝",
+  "dynasty": "唐",
+  "form": "五言律诗",
+  "content": "秦川雄帝宅，函谷壮皇居。\n绮殿千寻起，离宫百雉余。\n连甍遥接汉，飞观迥凌虚。\n云日隐层阙，风烟出绮疎。",
+  "normalized_content": "秦川雄帝宅函谷壮皇居绮殿千寻起离宫百雉余连甍遥接汉飞观迥凌虚云日隐层阙风烟出绮疎",
+  "tags": [],
+  "source": "chinese-poetry/chinese-poetry",
+  "source_url": "https://github.com/chinese-poetry/chinese-poetry/blob/master/全唐诗/poet.tang.0.json",
+  "license": "PD",
+  "edition": "",
+  "imported_at": "2026-10-20"
+ },
+ {
+  "title": "帝京篇十首 二",
+  "author_name": "太宗皇帝",
+  "dynasty": "唐",
+  "form": "五言律诗",
+  "content": "岩廊罢机务，崇文聊驻辇。\n玉匣启龙图，金绳披凤篆。\n韦编断仍续，缥帙舒还卷。\n对此乃淹留，欹案观坟典。",
+  "normalized_content": "岩廊罢机务崇文聊驻辇玉匣启龙图金绳披凤篆韦编断仍续缥帙舒还卷对此乃淹留欹案观坟典",
+  "tags": [],
+  "source": "chinese-poetry/chinese-poetry",
+  "source_url": "https://github.com/chinese-poetry/chinese-poetry/blob/master/全唐诗/poet.tang.0.json",
+  "license": "PD",
+  "edition": "",
+  "imported_at": "2026-10-20"
+ },
+ {
+  "title": "帝京篇十首 三",
+  "author_name": "太宗皇帝",
+  "dynasty": "唐",
+  "form": "五言律诗",
+  "content": "移步出词林，停舆欣武宴。\n雕弓写明月，骏马疑流电。\n惊雁落虚弦，啼猿悲急箭。\n阅赏诚多美，于兹乃忘倦。",
+  "normalized_content": "移步出词林停舆欣武宴雕弓写明月骏马疑流电惊雁落虚弦啼猿悲急箭阅赏诚多美于兹乃忘倦",
+  "tags": [
+   "月夜"
+  ],
+  "source": "chinese-poetry/chinese-poetry",
+  "source_url": "https://github.com/chinese-poetry/chinese-poetry/blob/master/全唐诗/poet.tang.0.json",
+  "license": "PD",
+  "edition": "",
+  "imported_at": "2026-10-20"
+ },
+ {
+  "title": "帝京篇十首 四",
+  "author_name": "太宗皇帝",
+  "dynasty": "唐",
+  "form": "五言律诗",
+  "content": "鸣笳临乐馆，眺听欢芳节。\n急管韵朱弦，清歌凝白雪。\n彩凤肃来仪，玄鹤纷成列。\n去兹郑卫声，雅音方可悦。",
+  "normalized_content": "鸣笳临乐馆眺听欢芳节急管韵朱弦清歌凝白雪彩凤肃来仪玄鹤纷成列去兹郑卫声雅音方可悦",
+  "tags": [
+   "冬景"
+  ],
+  "source": "chinese-poetry/chinese-poetry",
+  "source_url": "https://github.com/chinese-poetry/chinese-poetry/blob/master/全唐诗/poet.tang.0.json",
+  "license": "PD",
+  "edition": "",
+  "imported_at": "2026-10-20"
+ },
+ {
+  "title": "帝京篇十首 五",
+  "author_name": "太宗皇帝",
+  "dynasty": "唐",
+  "form": "五言律诗",
+  "content": "芳辰追逸趣，禁苑信多奇。\n桥形通汉上，峰势接云危。\n烟霞交隐映，花鸟自参差。\n何如肆辙迹？万里赏瑶池。",
+  "normalized_content": "芳辰追逸趣禁苑信多奇桥形通汉上峰势接云危烟霞交隐映花鸟自参差何如肆辙迹万里赏瑶池",
+  "tags": [
+   "壮阔"
+  ],
+  "source": "chinese-poetry/chinese-poetry",
+  "source_url": "https://github.com/chinese-poetry/chinese-poetry/blob/master/全唐诗/poet.tang.0.json",
+  "license": "PD",
+  "edition": "",
+  "imported_at": "2026-10-20"
+ },
+ {
+  "title": "帝京篇十首 六",
+  "author_name": "太宗皇帝",
+  "dynasty": "唐",
+  "form": "五言律诗",
+  "content": "飞盖去芳园，兰桡游翠渚。\n萍间日彩乱，荷处香风举。\n桂楫满中川，弦歌振长屿。\n岂必汾河曲，方为欢宴所。",
+  "normalized_content": "飞盖去芳园兰桡游翠渚萍间日彩乱荷处香风举桂楫满中川弦歌振长屿岂必汾河曲方为欢宴所",
+  "tags": [],
+  "source": "chinese-poetry/chinese-poetry",
+  "source_url": "https://github.com/chinese-poetry/chinese-poetry/blob/master/全唐诗/poet.tang.0.json",
+  "license": "PD",
+  "edition": "",
+  "imported_at": "2026-10-20"
+ },
+ {
+  "title": "帝京篇十首 七",
+  "author_name": "太宗皇帝",
+  "dynasty": "唐",
+  "form": "五言律诗",
+  "content": "落日双阙昏，回舆九重暮。\n长烟散初碧，皎月澄轻素。\n搴幌玩琴书，开轩引云雾。\n斜汉耿层阁，清风摇玉树。",
+  "normalized_content": "落日双阙昏回舆九重暮长烟散初碧皎月澄轻素搴幌玩琴书开轩引云雾斜汉耿层阁清风摇玉树",
+  "tags": [
+   "月夜"
+  ],
+  "source": "chinese-poetry/chinese-poetry",
+  "source_url": "https://github.com/chinese-poetry/chinese-poetry/blob/master/全唐诗/poet.tang.0.json",
+  "license": "PD",
+  "edition": "",
+  "imported_at": "2026-10-20"
+ },
+ {
+  "title": "帝京篇十首 八",
+  "author_name": "太宗皇帝",
+  "dynasty": "唐",
+  "form": "五言律诗",
+  "content": "欢乐难再逢，芳辰良可惜。\n玉酒泛云罍，兰殽陈绮席。\n千钟合尧禹，百兽谐金石。\n得志重寸阴，忘怀轻尺璧。",
+  "normalized_content": "欢乐难再逢芳辰良可惜玉酒泛云罍兰殽陈绮席千钟合尧禹百兽谐金石得志重寸阴忘怀轻尺璧",
+  "tags": [],
+  "source": "chinese-poetry/chinese-poetry",
+  "source_url": "https://github.com/chinese-poetry/chinese-poetry/blob/master/全唐诗/poet.tang.0.json",
+  "license": "PD",
+  "edition": "",
+  "imported_at": "2026-10-20"
+ },
+ {
+  "title": "帝京篇十首 九",
+  "author_name": "太宗皇帝",
+  "dynasty": "唐",
+  "form": "五言律诗",
+  "content": "建章欢赏夕，二八尽妖妍。\n罗绮昭阳殿，芬芳玳瑁筵。\n珮移星正动，扇掩月初圆。\n无劳上悬圃，即此对神仙。",
+  "normalized_content": "建章欢赏夕二八尽妖妍罗绮昭阳殿芬芳玳瑁筵珮移星正动扇掩月初圆无劳上悬圃即此对神仙",
+  "tags": [
+   "月夜"
+  ],
+  "source": "chinese-poetry/chinese-poetry",
+  "source_url": "https://github.com/chinese-poetry/chinese-poetry/blob/master/全唐诗/poet.tang.0.json",
+  "license": "PD",
+  "edition": "",
+  "imported_at": "2026-10-20"
+ },
+ {
+  "title": "帝京篇十首 十",
+  "author_name": "太宗皇帝",
+  "dynasty": "唐",
+  "form": "五言古诗",
+  "content": "以兹游观极，悠然独长想。\n披卷览前踪，抚躬寻既往。\n望古茅茨约，瞻今兰殿广。\n人道恶高危，虚心戒盈荡。\n奉天竭诚敬，临民思惠养。\n纳善察忠谏，明科慎刑赏。\n六五诚难继，四三非易仰。\n广待淳化敷，方嗣云亭响。",
+  "normalized_content": "以兹游观极悠然独长想披卷览前踪抚躬寻既往望古茅茨约瞻今兰殿广人道恶高危虚心戒盈荡奉天竭诚敬临民思惠养纳善察忠谏明科慎刑赏六五诚难继四三非易仰广待淳化敷方嗣云亭响",
+  "tags": [
+   "闲适"
+  ],
+  "source": "chinese-poetry/chinese-poetry",
+  "source_url": "https://github.com/chinese-poetry/chinese-poetry/blob/master/全唐诗/poet.tang.0.json",
+  "license": "PD",
+  "edition": "",
+  "imported_at": "2026-10-20"
+ },
+ {
+  "title": "饮马长城窟行",
+  "author_name": "太宗皇帝",
+  "dynasty": "唐",
+  "form": "五言古诗",
+  "content": "塞外悲风切，交河冰已结。\n瀚海百重波，阴山千里雪。\n迥戍危烽火，层峦引高节。\n悠悠卷斾旌，饮马出长城。\n寒沙连骑迹，朔吹断边声。\n胡尘清玉塞，羌笛韵金钲。\n绝漠干戈戢，车徒振原隰。\n都尉反龙堆，将军旋马邑。\n扬麾氛雾静，纪石功名立。\n荒裔一戎衣，灵台凯歌入。",
+  "normalized_content": "塞外悲风切交河冰已结瀚海百重波阴山千里雪迥戍危烽火层峦引高节悠悠卷斾旌饮马出长城寒沙连骑迹朔吹断边声胡尘清玉塞羌笛韵金钲绝漠干戈戢车徒振原隰都尉反龙堆将军旋马邑扬麾氛雾静纪石功名立荒裔一戎衣灵台凯歌入",
+  "tags": [
+   "冬景"
+  ],
+  "source": "chinese-poetry/chinese-poetry",
+  "source_url": "https://github.com/chinese-poetry/chinese-poetry/blob/master/全唐诗/poet.tang.0.json",
+  "license": "PD",
+  "edition": "",
+  "imported_at": "2026-10-20"
+ },
+ {
+  "title": "执契静三边",
+  "author_name": "太宗皇帝",
+  "dynasty": "唐",
+  "form": "五言古诗",
+  "content": "执契静三边，持衡临万姓。\n玉彩辉关烛，金华流日镜。\n无为宇宙清，有美璇玑正。\n皎佩星连景，飘衣云结庆。\n戢武耀七德，升文辉九功。\n烟波澄旧碧，尘火息前红。\n霜野韬莲劒，关城罢月弓。\n钱缀榆天合，新城柳塞空。\n花销葱岭雪，縠尽流沙雾。\n秋驾转兢怀，春冰弥轸虑。\n书绝龙庭羽，烽休凤穴戍。\n衣宵寝二难，食旰餐三惧。\n翦暴兴先废，除凶存昔亡。\n圆盖归天壤，方舆入地荒。\n孔海池京邑，双河沼帝乡。\n循躬思励己，抚俗媿时康。\n元首伫盐梅，股肱惟辅弼。\n羽贤崆岭四，翼圣襄城七。\n浇俗庶反淳，替文聊就质。\n已知隆至道，共欢区宇一。",
+  "normalized_content": "执契静三边持衡临万姓玉彩辉关烛金华流日镜无为宇宙清有美璇玑正皎佩星连景飘衣云结庆戢武耀七德升文辉九功烟波澄旧碧尘火息前红霜野韬莲劒关城罢月弓钱缀榆天合新城柳塞空花销葱岭雪縠尽流沙雾秋驾转兢怀春冰弥轸虑书绝龙庭羽烽休凤穴戍衣宵寝二难食旰餐三惧翦暴兴先废除凶存昔亡圆盖归天壤方舆入地荒孔海池京邑双河沼帝乡循躬思励己抚俗媿时康元首伫盐梅股肱惟辅弼羽贤崆岭四翼圣襄城七浇俗庶反淳替文聊就质已知隆至道共欢区宇一",
+  "tags": [
+   "冬景",
+   "月夜",
+   "秋意"
+  ],
+  "source": "chinese-poetry/chinese-poetry",
+  "source_url": "https://github.com/chinese-poetry/chinese-poetry/blob/master/全唐诗/poet.tang.0.json",
+  "license": "PD",
+  "edition": "",
+  "imported_at": "2026-10-20"
+ },
+ {
+  "title": "正日临朝",
+  "author_name": "太宗皇帝",
+  "dynasty": "唐",
+  "form": "五言古诗",
+  "content": "条风开献节，灰律动初阳。\n百蛮奉遐賮，万国朝未央。\n虽无舜禹迹，幸欣天地康。\n车轨同八表，书文混四方。\n赫奕俨冠盖，纷纶盛服章。\n羽旄飞驰道，钟鼓震岩廊。\n组练辉霞色，霜戟耀朝光。\n晨宵怀至理，终媿抚遐荒。",
+  "normalized_content": "条风开献节灰律动初阳百蛮奉遐賮万国朝未央虽无舜禹迹幸欣天地康车轨同八表书文混四方赫奕俨冠盖纷纶盛服章羽旄飞驰道钟鼓震岩廊组练辉霞色霜戟耀朝光晨宵怀至理终媿抚遐荒",
+  "tags": [
+   "秋意"
+  ],
+  "source": "chinese-poetry/chinese-poetry",
+  "source_url": "https://github.com/chinese-poetry/chinese-poetry/blob/master/全唐诗/poet.tang.0.json",
+  "license": "PD",
+  "edition": "",
+  "imported_at": "2026-10-20"
+ },
+ {
+  "title": "幸武功庆善宫",
+  "author_name": "太宗皇帝",
+  "dynasty": "唐",
+  "form": "古体诗",
+  "content": "寿丘惟旧迹，酆邑乃前基。\n粤予承累圣，悬弧亦在兹。\n弱龄逢运改，提劒郁匡时。\n指麾八荒定，怀柔万国夷。\n梯山咸入款，驾海亦来思。\n单于陪武帐，日逐卫文㮰。\n端扆朝四岳，无为任百司。\n霜节明秋景，轻冰结水湄。\n芸黄徧原隰，禾颖积京畿。\n共乐还乡宴，欢比大风诗。",
+  "normalized_content": "寿丘惟旧迹酆邑乃前基粤予承累圣悬弧亦在兹弱龄逢运改提劒郁匡时指麾八荒定怀柔万国夷梯山咸入款驾海亦来思单于陪武帐日逐卫文㮰端扆朝四岳无为任百司霜节明秋景轻冰结水湄芸黄徧原隰禾颖积京畿共乐还乡宴欢比大风诗",
+  "tags": [
+   "秋意"
+  ],
+  "source": "chinese-poetry/chinese-poetry",
+  "source_url": "https://github.com/chinese-poetry/chinese-poetry/blob/master/全唐诗/poet.tang.0.json",
+  "license": "PD",
+  "edition": "",
+  "imported_at": "2026-10-20"
+ },
+ {
+  "title": "重幸武功",
+  "author_name": "太宗皇帝",
+  "dynasty": "唐",
+  "form": "五言古诗",
+  "content": "代马依朔吹，惊禽愁昔丛。\n况兹承眷德，怀旧感深衷。\n积善忻余庆，畅武悦成功。\n垂衣天下治，端拱车书同。\n白水巡前迹，丹陵幸旧宫。\n列筵欢故老，高宴聚新丰。\n驻跸抚田畯，回舆访牧童。\n瑞气萦丹阙，祥烟散碧空。\n孤屿含霜白，遥山带日红。\n于焉欢击筑，聊以咏南风。",
+  "normalized_content": "代马依朔吹惊禽愁昔丛况兹承眷德怀旧感深衷积善忻余庆畅武悦成功垂衣天下治端拱车书同白水巡前迹丹陵幸旧宫列筵欢故老高宴聚新丰驻跸抚田畯回舆访牧童瑞气萦丹阙祥烟散碧空孤屿含霜白遥山带日红于焉欢击筑聊以咏南风",
+  "tags": [
+   "怀人",
+   "秋意"
+  ],
+  "source": "chinese-poetry/chinese-poetry",
+  "source_url": "https://github.com/chinese-poetry/chinese-poetry/blob/master/全唐诗/poet.tang.0.json",
+  "license": "PD",
+  "edition": "",
+  "imported_at": "2026-10-20"
+ },
+ {
+  "title": "经破薛举战地",
+  "author_name": "太宗皇帝",
+  "dynasty": "唐",
+  "form": "五言古诗",
+  "content": "昔年怀壮气，提戈初仗节。\n心随朗日高，志与秋霜洁。\n移锋惊电起，转战长河决。\n营碎落星沈，阵卷横云裂。\n一挥氛沴静，再举鲸鲵灭。\n于兹俯旧原，属目驻华轩。\n沈沙无故迹，减灶有残痕。\n浪霞穿水净，峰雾抱莲昏。\n世途亟流易，人事殊今昔。\n长想眺前踪，抚躬聊自适。",
+  "normalized_content": "昔年怀壮气提戈初仗节心随朗日高志与秋霜洁移锋惊电起转战长河决营碎落星沈阵卷横云裂一挥氛沴静再举鲸鲵灭于兹俯旧原属目驻华轩沈沙无故迹减灶有残痕浪霞穿水净峰雾抱莲昏世途亟流易人事殊今昔长想眺前踪抚躬聊自适",
+  "tags": [
+   "秋意"
+  ],
+  "source": "chinese-poetry/chinese-poetry",
+  "source_url": "https://github.com/chinese-poetry/chinese-poetry/blob/master/全唐诗/poet.tang.0.json",
+  "license": "PD",
+  "edition": "",
+  "imported_at": "2026-10-20"
+ },
+ {
+  "title": "过旧宅二首 一",
+  "author_name": "太宗皇帝",
+  "dynasty": "唐",
+  "form": "五言律诗",
+  "content": "新丰停翠辇，谯邑驻鸣笳。\n园荒一径断，苔古半阶斜。\n前池消旧水，昔树发今花。\n一朝辞此地，四海遂为家。",
+  "normalized_content": "新丰停翠辇谯邑驻鸣笳园荒一径断苔古半阶斜前池消旧水昔树发今花一朝辞此地四海遂为家",
+  "tags": [],
+  "source": "chinese-poetry/chinese-poetry",
+  "source_url": "https://github.com/chinese-poetry/chinese-poetry/blob/master/全唐诗/poet.tang.0.json",
+  "license": "PD",
+  "edition": "",
+  "imported_at": "2026-10-20"
+ },
+ {
+  "title": "过旧宅二首 二",
+  "author_name": "太宗皇帝",
+  "dynasty": "唐",
+  "form": "五言古诗",
+  "content": "金舆巡白水，玉辇驻新丰。\n纽落藤披架，花残菊破丛。\n叶铺荒草蔓，流竭半池空。\n纫珮兰凋径，舒圭叶翦桐。\n昔地一蕃内，今宅九围中。\n架海波澄镜，韬戈器反农。\n八表文同轨，无劳歌大风。",
+  "normalized_content": "金舆巡白水玉辇驻新丰纽落藤披架花残菊破丛叶铺荒草蔓流竭半池空纫珮兰凋径舒圭叶翦桐昔地一蕃内今宅九围中架海波澄镜韬戈器反农八表文同轨无劳歌大风",
+  "tags": [],
+  "source": "chinese-poetry/chinese-poetry",
+  "source_url": "https://github.com/chinese-poetry/chinese-poetry/blob/master/全唐诗/poet.tang.0.json",
+  "license": "PD",
+  "edition": "",
+  "imported_at": "2026-10-20"
+ },
+ {
+  "title": "还陕述怀",
+  "author_name": "太宗皇帝",
+  "dynasty": "唐",
+  "form": "五言古诗",
+  "content": "慨然抚长劒，济世岂邀名。\n星旗纷电举，日羽肃天行。\n徧野屯万骑，临原驻五营。\n登山麾武节，背水纵神兵。\n在昔戎戈动，今来宇宙平。",
+  "normalized_content": "慨然抚长劒济世岂邀名星旗纷电举日羽肃天行徧野屯万骑临原驻五营登山麾武节背水纵神兵在昔戎戈动今来宇宙平",
+  "tags": [
+   "登高"
+  ],
+  "source": "chinese-poetry/chinese-poetry",
+  "source_url": "https://github.com/chinese-poetry/chinese-poetry/blob/master/全唐诗/poet.tang.0.json",
+  "license": "PD",
+  "edition": "",
+  "imported_at": "2026-10-20"
+ },
+ {
+  "title": "入潼关",
+  "author_name": "太宗皇帝",
+  "dynasty": "唐",
+  "form": "古体诗",
+  "content": "崤函称地险，襟带壮两京。\n霜峰直临道，冰河曲绕城。\n古木参差影，寒猿断续声。\n冠盖往来合，风尘朝夕惊。\n高谈先马度，伪晓预鸡鸣。\n弃𦈡怀远志，封泥负壮情。\n别有真人气，安知名不名。",
+  "normalized_content": "崤函称地险襟带壮两京霜峰直临道冰河曲绕城古木参差影寒猿断续声冠盖往来合风尘朝夕惊高谈先马度伪晓预鸡鸣弃𦈡怀远志封泥负壮情别有真人气安知名不名",
+  "tags": [
+   "秋意"
+  ],
+  "source": "chinese-poetry/chinese-poetry",
+  "source_url": "https://github.com/chinese-poetry/chinese-poetry/blob/master/全唐诗/poet.tang.0.json",
+  "license": "PD",
+  "edition": "",
+  "imported_at": "2026-10-20"
+ },
+ {
+  "title": "于北平作",
+  "author_name": "太宗皇帝",
+  "dynasty": "唐",
+  "form": "五言古诗",
+  "content": "翠野驻戎轩，卢龙转征斾。\n遥山丽如绮，长流萦似带。\n海气百重楼，岩松千丈盖。",
+  "normalized_content": "翠野驻戎轩卢龙转征斾遥山丽如绮长流萦似带海气百重楼岩松千丈盖",
+  "tags": [],
+  "source": "chinese-poetry/chinese-poetry",
+  "source_url": "https://github.com/chinese-poetry/chinese-poetry/blob/master/全唐诗/poet.tang.0.json",
+  "license": "PD",
+  "edition": "",
+  "imported_at": "2026-10-20"
+ },
+ {
+  "title": "辽城望月",
+  "author_name": "太宗皇帝",
+  "dynasty": "唐",
+  "form": "五言古诗",
+  "content": "玄兔月初明，澄辉照辽碣。\n映云光暂隐，隔树花如缀。\n魄满桂枝圆，轮亏镜彩缺。\n临城却影散，带晕重围结。\n驻跸俯九都，停观妖氛灭。",
+  "normalized_content": "玄兔月初明澄辉照辽碣映云光暂隐隔树花如缀魄满桂枝圆轮亏镜彩缺临城却影散带晕重围结驻跸俯九都停观妖氛灭",
+  "tags": [
+   "月夜"
+  ],
+  "source": "chinese-poetry/chinese-poetry",
+  "source_url": "https://github.com/chinese-poetry/chinese-poetry/blob/master/全唐诗/poet.tang.0.json",
+  "license": "PD",
+  "edition": "",
+  "imported_at": "2026-10-20"
+ },
+ {
+  "title": "春日登陕州城楼俯眺原野回丹碧缀烟霞密翠斑红芳菲花柳即目川岫聊以命篇",
+  "author_name": "太宗皇帝",
+  "dynasty": "唐",
+  "form": "五言古诗",
+  "content": "碧原开雾隰，绮岭峻霞城。\n烟峰高下翠，日浪浅深明。\n斑红粧橤树，圆青压溜荆。\n迹岩劳傅想，窥野访莘情。\n巨川何以济，舟楫伫时英。",
+  "normalized_content": "碧原开雾隰绮岭峻霞城烟峰高下翠日浪浅深明斑红粧橤树圆青压溜荆迹岩劳傅想窥野访莘情巨川何以济舟楫伫时英",
+  "tags": [],
+  "source": "chinese-poetry/chinese-poetry",
+  "source_url": "https://github.com/chinese-poetry/chinese-poetry/blob/master/全唐诗/poet.tang.0.json",
+  "license": "PD",
+  "edition": "",
+  "imported_at": "2026-10-20"
+ },
+ {
+  "title": "春日玄武门宴群臣",
+  "author_name": "太宗皇帝",
+  "dynasty": "唐",
+  "form": "五言古诗",
+  "content": "韶光开令序，淑气动芳年。\n驻辇华林侧，高宴柏梁前。\n紫庭文珮满，丹墀衮绂连。\n九夷簉瑶席，五狄列琼筵。\n娱宾歌湛露，广乐奏钧天。\n清尊浮绿醑，雅曲韵朱弦。\n粤余君万国，还慙抚八埏。\n庶几保贞固，虚己厉求贤。",
+  "normalized_content": "韶光开令序淑气动芳年驻辇华林侧高宴柏梁前紫庭文珮满丹墀衮绂连九夷簉瑶席五狄列琼筵娱宾歌湛露广乐奏钧天清尊浮绿醑雅曲韵朱弦粤余君万国还慙抚八埏庶几保贞固虚己厉求贤",
+  "tags": [],
+  "source": "chinese-poetry/chinese-poetry",
+  "source_url": "https://github.com/chinese-poetry/chinese-poetry/blob/master/全唐诗/poet.tang.0.json",
+  "license": "PD",
+  "edition": "",
+  "imported_at": "2026-10-20"
+ },
+ {
+  "title": "登三台言志",
+  "author_name": "太宗皇帝",
+  "dynasty": "唐",
+  "form": "五言古诗",
+  "content": "未央初壮汉，阿房昔侈秦。\n在危犹骋丽，居奢遂役人。\n岂如家四海，日宇罄朝伦。\n扇天裁户旧，砌地翦基新。\n引月擎宵桂，飘云逼曙鳞。\n露除光炫玉，霜阙映雕银。\n舞接花梁燕，歌迎鸟路尘。\n镜池波太液，庄苑丽宜春。\n作异甘泉日，停非路寝辰。\n念劳慙逸己，居旷返劳神。\n所欣成大厦，宏材伫渭滨。",
+  "normalized_content": "未央初壮汉阿房昔侈秦在危犹骋丽居奢遂役人岂如家四海日宇罄朝伦扇天裁户旧砌地翦基新引月擎宵桂飘云逼曙鳞露除光炫玉霜阙映雕银舞接花梁燕歌迎鸟路尘镜池波太液庄苑丽宜春作异甘泉日停非路寝辰念劳慙逸己居旷返劳神所欣成大厦宏材伫渭滨",
+  "tags": [
+   "月夜",
+   "秋意"
+  ],
+  "source": "chinese-poetry/chinese-poetry",
+  "source_url": "https://github.com/chinese-poetry/chinese-poetry/blob/master/全唐诗/poet.tang.0.json",
+  "license": "PD",
+  "edition": "",
+  "imported_at": "2026-10-20"
+ },
+ {
+  "title": "出猎",
+  "author_name": "太宗皇帝",
+  "dynasty": "唐",
+  "form": "五言古诗",
+  "content": "楚王云梦泽，汉帝长杨宫。\n岂若因农暇，阅武出轘嵩。\n三驱陈锐卒，七萃列材雄。\n寒野霜氛白，平原烧火红。\n雕戈夏服箭，羽骑绿沈弓。\n怖兽潜幽壑，惊禽散翠空。\n长烟晦落景，灌木振严风。\n所为除民瘼，非是悦林丛。",
+  "normalized_content": "楚王云梦泽汉帝长杨宫岂若因农暇阅武出轘嵩三驱陈锐卒七萃列材雄寒野霜氛白平原烧火红雕戈夏服箭羽骑绿沈弓怖兽潜幽壑惊禽散翠空长烟晦落景灌木振严风所为除民瘼非是悦林丛",
+  "tags": [
+   "秋意"
+  ],
+  "source": "chinese-poetry/chinese-poetry",
+  "source_url": "https://github.com/chinese-poetry/chinese-poetry/blob/master/全唐诗/poet.tang.0.json",
+  "license": "PD",
+  "edition": "",
+  "imported_at": "2026-10-20"
+ },
+ {
+  "title": "冬狩",
+  "author_name": "太宗皇帝",
+  "dynasty": "唐",
+  "form": "五言古诗",
+  "content": "烈烈寒风起，惨惨飞云浮。\n霜浓凝广隰，冰厚结清流。\n金鞍移上苑，玉勒骋平畴。\n旌旗四望合，罝罗一面求。\n楚踣争兕殪，秦亡角鹿愁。\n兽忙投密树，鸿惊起砾洲。\n骑敛原尘静，戈回岭日收。\n心非洛汭逸，意在渭滨游。\n禽荒非所乐，抚辔更招忧。",
+  "normalized_content": "烈烈寒风起惨惨飞云浮霜浓凝广隰冰厚结清流金鞍移上苑玉勒骋平畴旌旗四望合罝罗一面求楚踣争兕殪秦亡角鹿愁兽忙投密树鸿惊起砾洲骑敛原尘静戈回岭日收心非洛汭逸意在渭滨游禽荒非所乐抚辔更招忧",
+  "tags": [
+   "秋意"
+  ],
+  "source": "chinese-poetry/chinese-poetry",
+  "source_url": "https://github.com/chinese-poetry/chinese-poetry/blob/master/全唐诗/poet.tang.0.json",
+  "license": "PD",
+  "edition": "",
+  "imported_at": "2026-10-20"
+ },
+ {
+  "title": "春日望海",
+  "author_name": "太宗皇帝",
+  "dynasty": "唐",
+  "form": "五言古诗",
+  "content": "披襟眺沧海，凭轼玩春芳。\n积流横地纪，疎派引天潢。\n仙气凝三岭，和风扇八荒。\n拂潮云布色，穿浪日舒光。\n照岸花分彩，迷云雁断行。\n怀卑运深广，持满守灵长。\n有形非易测，无源讵可量。\n洪涛经变野，翠岛屡成桑。\n之罘思汉帝，碣石想秦皇。\n霓裳非本意，端拱且图王。",
+  "normalized_content": "披襟眺沧海凭轼玩春芳积流横地纪疎派引天潢仙气凝三岭和风扇八荒拂潮云布色穿浪日舒光照岸花分彩迷云雁断行怀卑运深广持满守灵长有形非易测无源讵可量洪涛经变野翠岛屡成桑之罘思汉帝碣石想秦皇霓裳非本意端拱且图王",
+  "tags": [],
+  "source": "chinese-poetry/chinese-poetry",
+  "source_url": "https://github.com/chinese-poetry/chinese-poetry/blob/master/全唐诗/poet.tang.0.json",
+  "license": "PD",
+  "edition": "",
+  "imported_at": "2026-10-20"
+ },
+ {
+  "title": "临洛水",
+  "author_name": "太宗皇帝",
+  "dynasty": "唐",
+  "form": "五言律诗",
+  "content": "春搜驰骏骨，总辔俯长河。\n霞处流萦锦，风前瀁卷罗。\n水花翻照树，堤兰倒插波。\n岂必汾阴曲，秋云发棹歌。",
+  "normalized_content": "春搜驰骏骨总辔俯长河霞处流萦锦风前瀁卷罗水花翻照树堤兰倒插波岂必汾阴曲秋云发棹歌",
+  "tags": [],
+  "source": "chinese-poetry/chinese-poetry",
+  "source_url": "https://github.com/chinese-poetry/chinese-poetry/blob/master/全唐诗/poet.tang.0.json",
+  "license": "PD",
+  "edition": "",
+  "imported_at": "2026-10-20"
+ },
+ {
+  "title": "望终南山",
+  "author_name": "太宗皇帝",
+  "dynasty": "唐",
+  "form": "五言律诗",
+  "content": "重峦俯渭水，碧嶂插遥天。\n出红扶岭日，入翠贮岩烟。\n叠松朝若夜，复岫阙疑全。\n对此恬千虑，无劳访九仙。",
+  "normalized_content": "重峦俯渭水碧嶂插遥天出红扶岭日入翠贮岩烟叠松朝若夜复岫阙疑全对此恬千虑无劳访九仙",
+  "tags": [],
+  "source": "chinese-poetry/chinese-poetry",
+  "source_url": "https://github.com/chinese-poetry/chinese-poetry/blob/master/全唐诗/poet.tang.0.json",
+  "license": "PD",
+  "edition": "",
+  "imported_at": "2026-10-20"
+ }
+]

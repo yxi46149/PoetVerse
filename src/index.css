@@ -1,0 +1,371 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   THE ONLY design-tokens file. This single file owns the whole app's visual
+   identity — colors, radius, fonts, shadows, light + dark. To re-theme the app
+   (e.g. "make it a Supabase theme"), edit the token VALUES in :root and .dark
+   below. Nothing else. No second config file, no component edits, no library
+   theme layer. Values are oklch() and are consumed directly by the component
+   styles and Element Plus theme below.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ── Design tokens — the ONLY place the app's visual identity is defined.
+   Re-theme the whole app by editing the values in :root (+ .dark). No other file. ── */
+:root {
+  --background: oklch(0.964 0.005 78.3);
+  --foreground: oklch(0.260 0.010 55.9);
+  --card: oklch(0.985 0.003 78.3);
+  --card-foreground: oklch(0.260 0.010 55.9);
+  --primary: oklch(0.498 0.133 28.2);
+  --primary-foreground: oklch(0.972 0.004 78.3);
+  --secondary: oklch(0.927 0.007 78.3);
+  --muted-foreground: oklch(0.495 0.015 59.9);
+  --accent: oklch(0.693 0.085 76.8);
+  --border: oklch(0.896 0.009 71.4);
+
+  --radius: 0.35rem;
+  --font-sans: 'DM Sans Variable', 'Noto Serif SC Variable', sans-serif;
+  --font-serif: 'Noto Serif SC Variable', 'Lora Variable', 'Songti SC', serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+  --shadow-sm: 0 1px 3px 0 oklch(0.260 0.010 55.9 / 0.08);
+  --shadow-md: 0 12px 30px -16px oklch(0.260 0.010 55.9 / 0.22);
+  --shadow-lg: 0 24px 60px -24px oklch(0.260 0.010 55.9 / 0.28);
+  --about-background: oklch(0.912 0.019 83.1);
+  --about-foreground: oklch(0.295 0.018 67.0);
+  --about-muted: oklch(0.484 0.023 72.3);
+}
+
+.dark {
+  --background: oklch(0.205 0.012 55.9);
+  --foreground: oklch(0.925 0.008 78.3);
+  --card: oklch(0.252 0.012 55.9);
+  --card-foreground: oklch(0.925 0.008 78.3);
+  --primary: oklch(0.735 0.098 43.2);
+  --primary-foreground: oklch(0.205 0.012 55.9);
+  --secondary: oklch(0.295 0.012 55.9);
+  --muted-foreground: oklch(0.705 0.014 71.3);
+  --accent: oklch(0.760 0.070 77.0);
+  --border: oklch(0.335 0.012 55.9);
+  --about-background: oklch(0.265 0.015 55.9);
+  --about-foreground: oklch(0.925 0.008 78.3);
+  --about-muted: oklch(0.725 0.012 71.3);
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    border-color: var(--border);
+  }
+
+  html,
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  p {
+    margin: 0;
+  }
+
+  button,
+  input {
+    font: inherit;
+  }
+
+  button {
+    color: inherit;
+  }
+
+  /* Full viewport chain so AppShell / Sidebar h-full + flex-1 work */
+  html {
+    height: 100%;
+    min-width: 320px;
+    background-color: var(--background);
+    overflow-x: clip;
+    overflow-y: scroll;
+    scrollbar-gutter: stable;
+    scroll-behavior: smooth;
+    scrollbar-color: color-mix(in srgb, var(--primary), transparent 24%) transparent;
+    scrollbar-width: thin;
+  }
+  html::-webkit-scrollbar { width: 8px; height: 8px; }
+  html::-webkit-scrollbar-track { background: transparent; }
+  html::-webkit-scrollbar-thumb {
+    border: 2px solid transparent;
+    border-radius: 999px;
+    background-clip: padding-box;
+    background-color: color-mix(in srgb, var(--primary), transparent 24%);
+  }
+  html::-webkit-scrollbar-thumb:hover { background-color: var(--primary); }
+  #app {
+    min-height: 100%;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: clip;
+  }
+  body {
+    min-height: 100%;
+    min-height: 100dvh;
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    overflow-x: clip;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+:root {
+  view-transition-name: root;
+}
+
+::view-transition-group(root) {
+  animation-duration: 620ms;
+  animation-timing-function: cubic-bezier(0.22, 0.8, 0.25, 1);
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+:root[data-theme-transition='to-light']::view-transition-new(root),
+:root[data-theme-transition='to-dark']::view-transition-new(root) {
+  animation: theme-transition-reveal 620ms cubic-bezier(0.22, 0.8, 0.25, 1) both;
+}
+
+@keyframes theme-transition-reveal {
+  from {
+    clip-path: circle(0 at var(--theme-transition-x) var(--theme-transition-y));
+    filter: drop-shadow(0 0 0 transparent);
+  }
+
+  55% {
+    filter: drop-shadow(0 0 20px var(--primary));
+  }
+
+  to {
+    clip-path: circle(150vmax at var(--theme-transition-x) var(--theme-transition-y));
+    filter: drop-shadow(0 0 0 transparent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(root),
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-duration: 1ms;
+  }
+}
+
+
+/* ── Shared layout primitives — common patterns extracted from the section
+   components. Add the pv-* class alongside the component's own class;
+   the component's scoped rule keeps only what is truly specific. ── */
+.pv-container { width: 100%; max-width: var(--page-container-max-width); margin: 0 auto; }
+.pv-section-title { margin: 16px 0 0; font-family: var(--font-serif); font-weight: 400; letter-spacing: .12em; }
+.pv-section-desc { margin: 16px 0 0; color: var(--muted-foreground); font-size: 14px; line-height: 1.75; }
+
+/* Element Plus controls use the same restrained palette as the PoetVerse shell. */
+:root {
+  --el-color-primary: var(--primary);
+  --el-color-primary-light-3: color-mix(in srgb, var(--primary), white 24%);
+  --el-color-primary-light-5: color-mix(in srgb, var(--primary), white 42%);
+  --el-color-primary-dark-2: color-mix(in srgb, var(--primary), black 18%);
+  --el-bg-color: var(--background);
+  --el-bg-color-page: var(--background);
+  --el-fill-color-blank: var(--background);
+  --el-text-color-primary: var(--foreground);
+  --el-text-color-regular: var(--muted-foreground);
+  --el-border-color: var(--border);
+  --el-border-color-light: color-mix(in srgb, var(--border), transparent 16%);
+  --el-border-color-lighter: color-mix(in srgb, var(--border), transparent 34%);
+  --el-border-color-extra-light: color-mix(in srgb, var(--border), transparent 52%);
+  --el-border-color-dark: color-mix(in srgb, var(--border), black 12%);
+  --el-border-color-darker: color-mix(in srgb, var(--border), black 24%);
+  --el-bg-color-overlay: var(--card);
+  --el-fill-color: var(--secondary);
+  --el-fill-color-light: color-mix(in srgb, var(--secondary), transparent 18%);
+  --el-fill-color-lighter: color-mix(in srgb, var(--secondary), transparent 34%);
+  --el-fill-color-extra-light: color-mix(in srgb, var(--secondary), transparent 50%);
+  --el-fill-color-dark: color-mix(in srgb, var(--secondary), black 10%);
+  --el-fill-color-darker: color-mix(in srgb, var(--secondary), black 20%);
+  --el-text-color-secondary: var(--muted-foreground);
+  --el-text-color-placeholder: color-mix(in srgb, var(--muted-foreground), transparent 28%);
+  --el-text-color-disabled: color-mix(in srgb, var(--muted-foreground), transparent 42%);
+  --el-mask-color: color-mix(in srgb, var(--foreground), transparent 58%);
+  --el-overlay-color: color-mix(in srgb, var(--foreground), transparent 50%);
+  --el-overlay-color-light: color-mix(in srgb, var(--foreground), transparent 72%);
+  --el-overlay-color-lighter: color-mix(in srgb, var(--foreground), transparent 84%);
+  --el-color-primary-light-7: color-mix(in srgb, var(--primary), var(--background) 72%);
+  --el-color-primary-light-8: color-mix(in srgb, var(--primary), var(--background) 84%);
+  --el-color-primary-light-9: color-mix(in srgb, var(--primary), var(--background) 92%);
+  --el-box-shadow: var(--shadow-md);
+  --el-box-shadow-light: var(--shadow-sm);
+  --el-box-shadow-lighter: var(--shadow-sm);
+  --el-border-radius-base: 0;
+  --el-font-family: var(--font-sans);
+}
+
+.poet-hero-button.el-button {
+  min-height: 3rem;
+  height: auto;
+  padding: 0 1.5rem;
+  border: 0;
+  border-radius: 0;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.poet-hero-button.el-button:hover,
+.poet-hero-button.el-button:focus-visible {
+  border: 0;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  transform: translateY(-0.125rem);
+  box-shadow: var(--shadow-md);
+}
+
+.poet-search-input.el-input { --el-input-border-color: transparent; width: 100%; }
+
+.poet-search-input .el-input__wrapper {
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.poet-search-input .el-input__wrapper.is-focus { box-shadow: none; }
+
+.poet-search-input .el-input__inner {
+  height: auto;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  color: var(--foreground);
+}
+
+.poet-search-input .el-input__inner::placeholder { color: color-mix(in srgb, var(--muted-foreground), transparent 30%); }
+
+.poet-filter-group.el-radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.poet-filter-group .el-radio-button { margin: 0; }
+
+.poet-filter-group .el-radio-button__inner {
+  min-height: 2.25rem;
+  padding: 0 0.75rem;
+  border: 0;
+  border-left: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: var(--muted-foreground);
+  font-size: 0.75rem;
+  line-height: 2.25rem;
+}
+
+.poet-filter-group .el-radio-button:first-child .el-radio-button__inner { border-left: 0; }
+
+.poet-filter-group .el-radio-button__inner:hover {
+  background: var(--secondary);
+  color: var(--foreground);
+}
+
+.poet-filter-group .el-radio-button__original-radio:checked + .el-radio-button__inner {
+  border: 0;
+  background: var(--primary);
+  box-shadow: none;
+  color: var(--primary-foreground);
+}
+
+@media (min-width: 1024px) {
+  .poet-filter-group.el-radio-group { flex-direction: column; align-items: flex-start; }
+}
+
+.poet-clear-button.el-button {
+  height: auto;
+  margin-top: 1.25rem;
+  padding: 0 0 0.25rem;
+  border-bottom: 1px solid var(--primary);
+  border-radius: 0;
+  color: var(--primary);
+  font-size: 0.875rem;
+}
+
+.poet-clear-button.el-button:hover,
+.poet-clear-button.el-button:focus-visible {
+  background: transparent;
+  color: var(--primary);
+}
+
+body.el-popup-parent--hidden {
+  width: 100% !important;
+  padding-right: 0 !important;
+}
+
+html:has(body.el-popup-parent--hidden) {
+  overflow: hidden;
+  background-color: color-mix(in srgb, var(--background) 84%, var(--foreground) 16%);
+}
+
+@media (max-width: 640px) {
+  html::-webkit-scrollbar { width: 5px; height: 5px; }
+  html::-webkit-scrollbar-thumb { border-width: 1px; }
+}
+
+.poet-dashboard-card.el-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--card);
+  color: var(--card-foreground);
+  box-shadow: var(--shadow-sm);
+}
+
+.poet-dashboard-card .el-card__header {
+  padding: 1.5rem 1.5rem 0.75rem;
+  border-bottom: 0;
+}
+
+.poet-dashboard-card .el-card__body { padding: 0 1.5rem 1.5rem; }
+
+.poet-sidebar-action.el-button {
+  width: 1.75rem;
+  height: 1.75rem;
+  margin-left: auto;
+  padding: 0;
+  color: var(--muted-foreground);
+}
+
+.poet-sidebar-action.el-button:hover,
+.poet-sidebar-action.el-button:focus-visible { background: var(--accent); color: var(--foreground); }
+
+.poet-sidebar-signout.el-button {
+  height: 40px;
+  min-height: 40px;
+  margin: 0;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--muted-foreground);
+}
+
+.poet-sidebar-signout.el-button:hover,
+.poet-sidebar-signout.el-button:focus-visible {
+  border-color: var(--border);
+  background: var(--secondary);
+  color: var(--foreground);
+}
+
+/* ── Shared page primitives — used by the HomePage section components.
+   .poet-page is the page shell; .section-eyebrow is the numbered kicker
+   shared by hero / chronicle / collection / about. Kept global (not scoped)
+   so every section component can use them without duplication. ── */
+.poet-page { --page-container-max-width: 1440px; min-height: 100%; overflow-x: clip; color: var(--foreground); }
+.section-eyebrow { display: flex; align-items: center; gap: 12px; margin: 0; color: var(--primary); font-family: var(--font-mono); font-size: 10px; letter-spacing: .24em; line-height: 1.4; text-transform: uppercase; }
+.section-eyebrow__rule { width: 36px; height: 1px; background: var(--primary); }
+.poet-hero-button:hover .hero-button__icon, .about-link:hover .about-link__icon { transform: translateX(4px); }

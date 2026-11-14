@@ -1,0 +1,30 @@
+# 构建上下文里不放任何可以重新生成或体积巨大的东西
+.git
+.gitconfig
+.gitignore
+.idea
+.vscode
+.playwright-cli
+.tanstack
+.vite-out
+
+# 依赖与产物
+**/node_modules
+dist
+server/dist
+server/.runtime
+server/src/generated
+*.tsbuildinfo
+*.log
+.tmp-*
+
+# 本地/线上环境变量绝不进镜像
+.env
+.env.*
+!/.env.example
+
+# 体积大且镜像不需要的目录（data 约 437MB）
+data
+docx
+scripts
+db

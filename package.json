@@ -1,0 +1,33 @@
+{
+  "name": "poetverse",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:api": "npm --prefix server run dev",
+    "build": "vite build",
+    "build:api": "npm --prefix server run build",
+    "db:generate": "npm --prefix server run prisma:generate",
+    "preview": "vite preview",
+    "lint:types": "vue-tsc --noEmit",
+    "lint": "npm run lint:types"
+  },
+  "devDependencies": {
+    "@fontsource-variable/noto-serif-sc": "^5.3.1",
+    "@types/node": "^26.6.5",
+    "@vitejs/plugin-vue": "^6.0.10",
+    "typescript": "~6.0.2",
+    "vite": "8.0.16",
+    "vue-tsc": "^3.3.13"
+  },
+  "dependencies": {
+    "@fontsource-variable/dm-sans": "^5.3.0",
+    "@fontsource-variable/lora": "^5.3.0",
+    "@fontsource/ibm-plex-mono": "^5.3.0",
+    "element-plus": "^2.14.7",
+    "lucide-vue-next": "^0.577.0",
+    "vue": "^3.5.44",
+    "vue-router": "^5.4.0"
+  }
+}

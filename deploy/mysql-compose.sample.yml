@@ -1,0 +1,38 @@
+# 参考：宿主机上共用的 MySQL/Redis 编排。
+#
+# 这套数据库给多个应用共用，所以网络不归它、也不归任何应用：
+#   docker network create shared-db      # 一次性，谁都不拥有，谁 down 都删不掉
+# MySQL 与应用两侧都以 external 接入同一个网络，应用侧用容器名 `mysql` 当主机名。
+#
+# 共享库的约定：
+#   - 每个应用一个库 + 一个专用账号，权限只授到自己的库（别让应用用 root）
+#   - 3306 只发布到宿主机回环：容器间走网络，宿主机上的裸进程走 127.0.0.1，都不需要对外
+#   - 密码走环境变量（同目录 .env + chmod 600），不写进文件
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:?请在 .env 中提供}
+      TZ: Asia/Shanghai
+    ports:
+      - "127.0.0.1:3306:3306"
+    volumes:
+      - ./mysql_data:/var/lib/mysql
+    restart: always
+
+  redis:
+    image: redis:alpine
+    container_name: redis
+    command: redis-server --requirepass ${REDIS_PASSWORD:?请在 .env 中提供} --bind 0.0.0.0 --protected-mode no
+    ports:
+      - "127.0.0.1:6379:6379"
+    volumes:
+      - ./redis_data:/data
+    restart: always
+
+networks:
+  default:
+    name: shared-db
+    external: true
